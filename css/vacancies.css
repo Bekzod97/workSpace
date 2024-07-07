@@ -1,0 +1,81 @@
+.vacancies {
+  padding: 50px 0;
+}
+
+.vacancies__container {
+
+  display: flex;
+  align-items: start;
+  gap: 24px 20px;
+}
+
+.vacancies__filter-btn {
+  display: none;
+}
+
+.vacancies__filter {
+  flex: 0 0 280px;
+}
+
+.vacancies__cards {
+  flex-basis: 100%;
+}
+
+@media(max-width: 1024px) {
+  .vacancies {
+    padding: 40px 0;
+  }
+}
+
+@media(max-width: 768px) {
+  .vacancies__container {
+    display: block;
+  }
+
+  .vacancies__filter-btn {
+    display: flex;
+    color: #2a18ff;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  .vacancies__filter-btn::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/arrow-blue.svg") no-repeat center;
+    position: relative;
+    bottom: 1px;
+  }
+
+  .vacancies__filter-btn--active::after {
+    transform: rotate(180deg);
+    top: 2px;
+  }
+
+  .vacancies__filter {
+    display: none;
+  }
+
+  .vacancies__filter {
+    transition: 0.3s ease-in-out;
+  }
+
+
+  .vacancies__filter-open {
+    display: block;
+    transition: 0.3s ease-in-out
+  }
+}
+
+@media(max-width: 640px) {
+
+  .vacancies {
+    padding: 20px 0;
+  }
+
+  .vacancies__filter-btn {
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,61 @@
+.footer {
+  padding: 50px 40px;
+}
+
+.footer__container {
+  display: grid;
+  gap: 27px;
+  grid-template-areas:
+    "logo ."
+    "copyright contacts";
+}
+
+.footer__logo {
+  grid-area: logo;
+}
+
+.footer__copyright {
+  grid-area: copyright;
+
+}
+
+.footer__contacts {
+  grid-area: contacts;
+  justify-self: end;
+  min-width: 180px;
+}
+
+.footer__contact {
+  margin-bottom: 8px;
+}
+
+.footer__contact:last-child {
+  margin-bottom: 0;
+}
+
+.footer__link:hover {
+  color: brown;
+}
+
+@media(max-width: 1024px) {
+  .footer {
+    padding: 40px 30px;
+  }
+}
+
+@media(max-width: 640px) {
+  .footer {
+    padding: 20px 30px;
+  }
+
+  .footer__container {
+    grid-template-areas:
+      "logo"
+      "copyright"
+      "contacts";
+  }
+
+  .footer__contacts {
+    justify-self: start;
+  }
+}

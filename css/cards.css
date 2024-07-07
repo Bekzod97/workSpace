@@ -1,0 +1,21 @@
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+
+@media(max-width: 1024px){
+
+  .card__item{
+    max-width: 280px;
+  }
+}
+
+@media(max-width: 768px){
+
+  .cards__list{
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 10px;
+  }
+}
